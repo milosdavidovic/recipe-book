@@ -1,0 +1,14 @@
+.InfiniteScroll {
+  min-height: calc(100vh);
+  width: 100%;
+  overflow: auto;
+
+  .content {
+    margin-bottom: 20px; /* Add margin at the bottom to accommodate the loading indicator */
+  }
+
+  .loadingIndicator {
+    text-align: center;
+    padding: 10px 0;
+  }
+}

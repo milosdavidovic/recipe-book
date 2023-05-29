@@ -1,0 +1,48 @@
+.Banner {
+  width: 600px;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 20px 20px;
+  position: relative;
+  margin: auto;
+
+  .wrapper {
+    padding: 20px;
+    border: 2px solid #cc6a4d;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .subtitle {
+    font-style: italic;
+    text-align: justify;
+  }
+
+  .badge {
+    position: absolute;
+    top: 4px;
+    left: 38%;
+    background-color: #fff;
+    padding: 4px 12px;
+  }
+
+  .callToAction {
+    color: #1d4e42;
+    padding: 12px 32px;
+    font-size: 0.825rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  .callToAction:hover {
+    color: #348672;
+  }
+}

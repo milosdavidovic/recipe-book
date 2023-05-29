@@ -1,0 +1,30 @@
+{
+  "name": "next",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@portabletext/react": "^3.0.0",
+    "@sanity/client": "^6.1.0",
+    "@sanity/image-url": "^1.0.2",
+    "@tanstack/react-query": "^4.29.7",
+    "@tanstack/react-query-devtools": "^4.29.7",
+    "@types/node": "20.1.5",
+    "@types/react": "18.2.6",
+    "@types/react-dom": "18.2.4",
+    "eslint": "8.40.0",
+    "eslint-config-next": "13.4.2",
+    "groq": "^3.11.0",
+    "next": "13.4.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "sass": "^1.62.1",
+    "typescript": "5.0.4"
+  }
+}
+

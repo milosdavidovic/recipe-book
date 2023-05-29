@@ -1,0 +1,16 @@
+.aboutAuthor {
+  display: inline-flex;
+  gap: 20px;
+  align-items: flex-start;
+
+  .title {
+    font-size: 1.5rem;
+    font-weight: 900;
+  }
+
+  .description {
+    font-size: 0.875rem;
+    color: #404040;
+    text-align: justify;
+  }
+}

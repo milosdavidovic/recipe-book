@@ -1,0 +1,23 @@
+.recipeCard {
+  background-color: #fff;
+
+  .title {
+    font-size: 1.5;
+    font-weight: bold;
+  }
+
+  .author {
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px;
+  }
+}
+
+.recipeCard:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0 #509686;
+}
