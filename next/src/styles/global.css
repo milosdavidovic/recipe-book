@@ -1,3 +1,15 @@
+:root {
+  font-size: 16px;
+
+  --primary-color: #874c62;
+  --secondary-color: #f1d486;
+  --secondary-color-light: #f4dfa4;
+  --background-color: #f5ebcf;
+  --background-color-light: #ffffff;
+  --border-color: #313131;
+  --text-color: #313131;
+}
+
 html,
 body {
   padding: 0;
@@ -6,7 +18,7 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   line-height: 1.6;
   font-size: 18px;
-  color: #1d4e42;
+  color: #313131;
 }
 
 * {

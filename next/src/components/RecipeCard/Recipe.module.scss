@@ -6,9 +6,6 @@
     font-weight: bold;
   }
 
-  .author {
-  }
-
   .content {
     display: flex;
     flex-direction: column;
@@ -19,5 +16,5 @@
 
 .recipeCard:hover {
   transform: translate(-2px, -2px);
-  box-shadow: 5px 5px 0 #509686;
+  box-shadow: 5px 5px 0 var(--background-color);
 }

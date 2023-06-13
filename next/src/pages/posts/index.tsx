@@ -6,6 +6,7 @@ import SearchInput from "../../components/SearchInput/SearchInput";
 import { useInfiniteQuery } from "@tanstack/react-query";
 import RecipeCard from "@/components/RecipeCard";
 import InfiniteScroll from "@/components/InfiniteScroll";
+import styles from "./posts.module.scss";
 
 const PAGE_SIZE = 8;
 
@@ -70,9 +71,7 @@ const Posts = () => {
 
   return (
     <Layout>
-      <h1 style={{ textAlign: "center" }}>
-        Welcome to Ultimate Chef Recipe Book
-      </h1>
+      <h1 className={styles.headline}>Welcome to Ultimate Chef Recipe Book</h1>
 
       <SearchInput
         value={searchValue}
@@ -90,14 +89,7 @@ const Posts = () => {
           }
         }}
       >
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(2, 1fr)",
-            gridGap: "12px",
-            marginTop: "24px",
-          }}
-        >
+        <div className={styles["posts-container"]}>
           {(items || []).map((item) => (
             <RecipeCard
               key={item.title}

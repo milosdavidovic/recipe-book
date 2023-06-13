@@ -1,25 +1,59 @@
-import React, { PropsWithChildren } from "react";
+import React, { PropsWithChildren, useRef } from "react";
 import classes from "./Layout.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import { useScroll, motion, useTransform } from "framer-motion";
 
 const Layout = ({ children }: PropsWithChildren) => {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollY } = useScroll({
+    container: ref,
+  });
+
+  const size = useTransform(
+    scrollY,
+    // Map x from these values:
+    [0, 500],
+    // Into these values:
+    [100, 60]
+  );
+
+  const scale = useTransform(
+    scrollY,
+    // Map x from these values:
+    [0, 500],
+    // Into these values:
+    [1, 0.75]
+  );
+
   return (
     <div className={classes.container}>
-      <header className={classes.header}>
-        <div className={classes.logo}>
+      <motion.header className={classes.header} style={{ opacity: scale }}>
+        <motion.div className={classes.logo}>
           <Link href="/">
-            <Image alt="logo" width={80} height={80} src="/logo-1.png" />
+            <motion.div
+              style={{ width: size, height: size, position: "relative" }}
+            >
+              <Image
+                alt="logo"
+                fill
+                style={{ objectFit: "cover" }}
+                src="/logo.png"
+              />
+            </motion.div>
           </Link>
-          Ultimate Chef
-        </div>
+          <motion.span style={{ scale }}>Ultimate Chef</motion.span>
+        </motion.div>
         <nav className={classes.nav}>
           <Link href="/">Home</Link>
           <Link href="/posts">Recipes</Link>
         </nav>
-      </header>
+      </motion.header>
 
-      <div style={{ overflowY: "auto", height: "calc(100vh - 90px)" }}>
+      <div
+        style={{ overflowY: "auto", height: "calc(100vh - 90px)" }}
+        ref={ref}
+      >
         <main className={classes.main}>{children}</main>
         <footer className={classes.footer}>
           &copy; 2023 Ultimate Chef. All rights reserved.

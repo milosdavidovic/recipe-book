@@ -29,8 +29,9 @@ const Home = ({ featured }) => {
         <h2>
           ...not interested in these?
           <span>
-            <Link href={"/posts"} style={{ color: "#CC6A4D" }}>
-              See other {featured.total}
+            <Link href={"/posts"} style={{ color: "var(--text-color)" }}>
+              {" "}
+              See other recipes ({featured.total})
             </Link>
           </span>
         </h2>

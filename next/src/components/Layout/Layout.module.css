@@ -1,19 +1,19 @@
 /* CSS Grid styles */
 .container {
-  display: grid;
-  grid-template-rows: auto 1fr; /* Header, Content, Footer */
   min-height: 100vh; /* Ensures the grid takes up the full viewport height */
-  background-color: #f0f9f9;
+  background-color: var(--background-color-light);
 }
 
 .header {
-  background-color: #f9eae3;
-  border-bottom: 1px solid #cc6a4d;
+  position: sticky;
+  background-color: var(--secondary-color);
+  border-bottom: 1px solid var(--border-color);
   padding: 20px;
-  display: grid;
-  grid-template-columns: 1fr auto; /* Logo and Menu */
-  align-items: center; /* Center vertically */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 4px 48px;
+  color: var(--primary-color);
 }
 
 .nav {
@@ -21,17 +21,17 @@
 }
 
 .nav a {
-  color: #1d4e42;
+  color: var(--text-color);
   font-weight: bold;
   margin-left: 20px;
   text-decoration: none;
 }
 
 .nav a:hover {
-  color: #1d4e42;
+  color: var(--text-color);
   font-weight: bolder;
   margin-left: 20px;
-  border-bottom: 3px solid #1d4e42;
+  border-bottom: 3px solid var(--border-color);
 }
 
 .main {
@@ -43,8 +43,9 @@
 }
 
 .footer {
-  background-color: #f9eae3;
-  border-top: 1px solid #cc6a4d;
+  background-color: var(--background-color-light);
+  border-top: 1px solid var(--border-color);
+  color: var(--text-color);
   padding: 20px;
   text-align: center;
   min-height: 100px;
@@ -55,7 +56,7 @@
   display: inline-flex;
   gap: 24px;
   align-items: center;
-  color: #cc6a4d;
+  color: var(--text-color);
   font-weight: bolder;
   font-size: 1.5rem;
 }
