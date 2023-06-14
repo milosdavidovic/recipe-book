@@ -1,6 +1,5 @@
-import React, { DetailedHTMLProps, HTMLAttributes } from "react";
+import React from "react";
 import Image from "next/image";
-import { ImageModel } from "@/types/sanity";
 import { sanityImageBuilder } from "@/helpers/sanityImageBuilder";
 
 const styles: Record<string, React.CSSProperties> = {
@@ -21,7 +20,7 @@ const styles: Record<string, React.CSSProperties> = {
   },
 };
 
-const RatioImage = ({ image }: { image: ImageModel }) => {
+const RatioImage = ({ image }: { image: any }) => {
   return (
     <div style={styles.imageContainer}>
       <Image
