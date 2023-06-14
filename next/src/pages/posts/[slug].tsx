@@ -12,8 +12,6 @@ import BackButton from "@/components/BackButton";
 import AboutAuthor from "@/components/AboutAuthor";
 
 const Post = ({ post }: { post: PostModel }) => {
-  console.log(post);
-
   return (
     <Layout>
       <div>
