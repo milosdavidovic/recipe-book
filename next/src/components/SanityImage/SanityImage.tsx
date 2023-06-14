@@ -9,7 +9,7 @@ const SanityImage = ({
   height,
   rounded = false,
 }: {
-  image: ImageModel;
+  image: any;
   width: number;
   height: number;
   rounded: boolean;
