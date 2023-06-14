@@ -5,7 +5,7 @@ import RecipeCard from "@/components/RecipeCard";
 import Link from "next/link";
 import Banner from "@/components/Banner/Banner";
 
-const Home = ({ featured }) => {
+const Home = ({ featured }: any) => {
   return (
     <Layout>
       <div style={{ minHeight: "90vh" }}>
@@ -14,7 +14,7 @@ const Home = ({ featured }) => {
         </div>
         <h1>Our Latest Recipes</h1>
         <div style={{ display: "flex", flexGrow: 1, gap: "8px" }}>
-          {featured.items.map((item) => {
+          {featured.items.map((item: any) => {
             return (
               <RecipeCard
                 key={item.title}
