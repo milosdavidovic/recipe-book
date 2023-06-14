@@ -50,10 +50,7 @@ const Layout = ({ children }: PropsWithChildren) => {
         </nav>
       </motion.header>
 
-      <div
-        style={{ overflowY: "auto", height: "calc(100vh - 90px)" }}
-        ref={ref}
-      >
+      <div style={{ overflowY: "auto", height: "100vh" }} ref={ref}>
         <main className={classes.main}>{children}</main>
         <footer className={classes.footer}>
           &copy; 2023 Ultimate Chef. All rights reserved.
